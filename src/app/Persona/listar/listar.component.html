@@ -1,1 +1,30 @@
-<p>listar works!</p>
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-center">Personas</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th colspan="2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let persona of personas" class="text-center">
+                            <td>{{persona.id}}</td>
+                            <td>{{persona.nombre}}</td>
+                            <td>{{persona.dni}}</td>
+                            <td><a href="#" class="btn btn-warning">Editar</a></td>
+                            <td><a href="#" class="btn btn-danger">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+    </div>
+</div>
