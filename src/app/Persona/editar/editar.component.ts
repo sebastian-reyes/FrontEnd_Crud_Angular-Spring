@@ -24,4 +24,12 @@ export class EditarComponent implements OnInit {
     })
   }
 
+  Actualizar(persona:Persona){
+    this.service.editarPersona(persona).subscribe(data=>{
+      this.persona=data;
+      alert("Se actualizó con éxito!");
+      this.router.navigate(['listar'])
+    })
+  }
+
 }
