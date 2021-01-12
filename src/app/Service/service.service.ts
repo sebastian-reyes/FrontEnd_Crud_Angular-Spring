@@ -20,7 +20,7 @@ export class ServiceService {
     return this.http.post<Persona>(this.url,persona);
   }
 
-  getPersonaId(id:number){
+  getPersonaId(id:string|null){
     return this.http.get<Persona>(this.url+"/"+id);
   }
 

@@ -19,7 +19,7 @@ export class EditarComponent implements OnInit {
 
   Editar(){
     let id = localStorage.getItem("id");
-    this.service.getPersonaId(+id).subscribe(data=>{
+    this.service.getPersonaId(id).subscribe(data=>{
       this.persona = data;
     })
   }
