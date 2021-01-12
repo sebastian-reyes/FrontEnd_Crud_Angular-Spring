@@ -28,4 +28,8 @@ export class ServiceService {
     return this.http.put<Persona>(this.url,persona);
   }
 
+  deletePersona(persona:Persona){
+    return this.http.delete<Persona>(this.url+"/"+persona.id);
+  }
+
 }

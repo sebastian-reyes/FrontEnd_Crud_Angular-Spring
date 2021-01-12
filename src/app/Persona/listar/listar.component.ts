@@ -11,16 +11,23 @@ import { ServiceService } from 'src/app/Service/service.service';
 export class ListarComponent implements OnInit {
 
   personas:Persona[] = [];
-  constructor(private http:ServiceService, private router:Router) { }
+  constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void{
-    this.http.getPersonas().subscribe(data=>{
+    this.service.getPersonas().subscribe(data=>{
       this.personas=data;
     })
   }
   Editar(persona:Persona): void{
     localStorage.setItem("id",persona.id.toString());
     this.router.navigate(["editar"])
+  }
+
+  Eliminar(persona:Persona){
+    this.service.deletePersona(persona).subscribe(data=>{
+      this.personas = this.personas.filter(p=>p!==persona);
+      alert("Usuario eliminado...");
+    })
   }
 
 }

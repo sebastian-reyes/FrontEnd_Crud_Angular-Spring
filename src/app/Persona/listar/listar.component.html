@@ -20,7 +20,7 @@
                             <td>{{persona.nombre}}</td>
                             <td>{{persona.dni}}</td>
                             <td><button (click)="Editar(persona)" class="btn btn-warning">Editar</button></td>
-                            <td><button class="btn btn-danger">Eliminar</button></td>
+                            <td><button (click)="Eliminar(persona)" class="btn btn-danger">Eliminar</button></td>
                         </tr>
                     </tbody>
                 </table>
