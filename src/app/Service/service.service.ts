@@ -20,4 +20,12 @@ export class ServiceService {
     return this.http.post<Persona>(this.url,persona);
   }
 
+  getPersonaId(id:number){
+    return this.http.get<Persona>(this.url+"/"+id);
+  }
+
+  editarPersona(persona:Persona){
+    return this.http.put<Persona>(this.url,persona);
+  }
+
 }

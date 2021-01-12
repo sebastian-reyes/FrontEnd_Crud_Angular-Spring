@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/Modelos/persona';
+import { ServiceService } from 'src/app/Service/service.service';
 
 @Component({
   selector: 'app-editar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarComponent implements OnInit {
 
-  constructor() { }
+  persona: Persona = new Persona();
+  constructor(private router:Router,private service:ServiceService) { }
 
   ngOnInit(): void {
+    this.Editar();
+  }
+
+  Editar(){
+    let id = localStorage.getItem("id");
+    this.service.getPersonaId(+id).subscribe(data=>{
+      this.persona = data;
+    })
   }
 
 }
