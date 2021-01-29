@@ -2,7 +2,9 @@
 
 Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-![gif crud angular](https://github.com/sebastian-reyes/FrontEnd_Crud_Angular-Spring/blob/master/gh-rf/angular-crud.gif)
+<p align="center">
+  <img src="https://github.com/sebastian-reyes/FrontEnd_Crud_Angular-Spring/blob/master/gh-rf/angular-crud.gif" alt="gif-crud-angular" />
+</p>
 
 ## npm
 
